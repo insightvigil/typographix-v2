@@ -1,7 +1,5 @@
 html {
     font-size: 62.5%;
-    
-    
 }
 
 * {
@@ -29,7 +27,7 @@ header h1 {
     position: relative;
     bottom: 5px;
     padding: 20px;
-    font-size: 10.0rem;
+    font-size: 10rem;
     font-weight: 500;
     font-style: italic;
     animation-name: focus-in-contract;
@@ -91,3 +89,20 @@ footer {
     font-size: 2.0rem;
 }
 
+@media only screen and (max-width: 650px) {
+ 
+
+    header h1 {
+        font-size: 15vw;
+    }
+
+    .main__icons {
+    top:0 ;
+    font-size: 5vw;
+    text-align: center;
+}
+
+    footer small {
+        font-size: 3vw;
+    }
+}
