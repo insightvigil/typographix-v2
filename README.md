@@ -16,7 +16,7 @@ In this version I started to transform a simple animation text reciver into a co
 - Web Page Structured
 - Dark Mode
 
-You can check it out live [here](https://insightvigil.github.io/typographix-v1.
+You can check it out live [here](https://insightvigil.github.io/typographix-v2).
 
 ### Contributors 🤝
 - [Adrián Vigil](https://github.com/insightvigil)
