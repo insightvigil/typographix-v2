@@ -1,3 +1,19 @@
+:root {
+    --on-background: rgb(66,66,66);
+    --background: rgb(255,255,255);
+
+
+}
+
+[data-theme="dark"] {
+    --on-background: rgb(233, 233, 233);
+    --background: rgb(0, 0, 0);
+
+}
+
+
+/* ------   General -----*/
+
 html {
     font-size: 62.5%;
 }
@@ -7,21 +23,72 @@ html {
     padding: 0;
     margin: 0;
     font-family: "Jost",sans-serif;
-    overflow-x: hidden;
-}
+    color: var(--on-background);
+    
 
 body {
     width: 100%;
     height: 100vh;
+    transition: background-color 0.75s ease, color 0.75s ease;
+    background-color: var(--background);
+}
     
 }
 
-header {
+a {
+    text-decoration: none;
+    color: var(--on-background);
+}
+
+a:hover {
+    padding-bottom: 5px;
+    border-bottom: 5px solid var(--on-background);
+}
+
+/* ------  Section 1 ------ */
+/* ---- Dark Mode Switch ----- */
+.theme-switcher {
     display: flex;
-    width: 100%;
-    height: 45%;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.theme-switcher span {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: var(--on-background);
+}
+
+.theme-switcher i {
+    font-size: 15px;
+}
+
+.theme-switcher i:hover {
+    transform: scale(1.1);
+}
+
+section {
+    min-height:100vh;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+#section-1 {
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%; 
+    
 }
 
 header h1 {
@@ -52,9 +119,9 @@ header h1 {
 }
 
 
+
 main {
     width: 100%;
-    height: 45%;
     text-align: center;
 }
 
@@ -64,6 +131,9 @@ main  section{
 }
 
 .main__icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
     font-size: 3.0rem;
     text-align: center;
 }
@@ -79,16 +149,77 @@ main  section{
 }
 
 
-footer {
-    display: flex;
+h2 {
+    font-size: 4.2rem;
+}
+
+
+/*----------- Section 2 ---------*/
+.main-image {
+    height: auto;
+    width: 50%;
+    position: relative;
+    padding: 25px;
+    top:5px;
+    border: 10px solid var(--on-background);
+}
+
+/* ------------ Section 3 ----------*/
+
+.image-container {
+    position: relative;
+    top:-25%;
+    height: 50vh;
+
+}
+
+.small-image {
+    height: 50%;
+    width: auto;
+    padding: 20px;
+    border: 10px solid var(--on-background);
+}
+
+.small-image:not(:first-child){
+    margin-left: 20px;
+}
+
+/* ---- Section 4 ---- */
+.blog-container {
+    margin: 0 auto;
+    width: 50ch;
+}
+
+.blog-item {
+    margin-bottom: 50px;
+}
+
+/* Section 5 */
+
+.wave {
     width: 100%;
-    height: 10%;
-    justify-content: center;
-    align-items: center;
+}
+
+.wave > svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
     color: white;
-    background-color: black;
     font-size: 2.0rem;
 }
+
+footer small {
+    color: white;
+}
+
+
 
 @media only screen and (max-width: 650px) {
     body {
